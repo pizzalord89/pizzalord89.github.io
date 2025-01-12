@@ -3,28 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
     <title>FUNNY</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <script>
- Dos(document.getElementById("app"), {
-   dosboxConf: `
-     [autoexec]
-     mount c .
-     c:
-   `,
-   initFs: [
-     { path: "1.txt", contents: new TextEncoder().encode("123") },
-     { path: "D/2.txt", contents: new TextEncoder().encode("345") },
-   ],
-   onEvent: (event, ci) => {
-     if (event === "ci-ready") {
-        // ci: CommandIterface is ready
-    }
-  },
-});</script>
     <!-- Header Section -->
 	<div class="scrolling-text">
             <span>Breaking News: THIS SITE IS SUPER COOL I LOVE PETER GRIFFIN!</span>
@@ -49,7 +31,7 @@
           <li>Item 3</li>
        </ul>
 	   </div>
-	  <div class = "seg2" id="dos-container">
+	  <div class = "seg2" id="dosbox">
 		  
 		  
 	    </div>
@@ -60,6 +42,17 @@
     <footer>
         <p></p>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/js-dos@6.0.0/dist/js-dos.min.js"></script>
+<script>
+    // Initialize JS-DOS and point it to the game files
+    var dosbox = new jsdos.DosBox({
+        canvas: document.getElementById('dosbox'),
+        gameFile: 'hoyle/install.exe', // Path to your game executable
+        fs: {
+            '/hoyle': '/hoyle' // Map game files to the correct location
+        }
+    });
+</script>	
 </body>
 </html>
 
