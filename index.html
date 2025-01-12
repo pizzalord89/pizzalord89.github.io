@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNNY</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/js-dos@7.3.0/js-dos.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+	<div class="scrolling-text">
+            <span>Breaking News: THIS SITE IS SUPER COOL I LOVE PETER GRIFFIN!</span>
+    </div>
+
+    <header class = "headerr">
+
+	    <img src="peterrotating.gif" alt="Description of the image">
+        <h1 class="title1">awesome cool site</h1>
+		<img src="peterrotating.gif" alt="Description of the image">
+
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+	<div class = "seg">
+	  <div class = "seg1">
+	    <p class="normal-title"> MENU </p>
+		<ul> 
+          <li>Item 1</li> 
+          <li>Item 2</li>
+          <li>Item 3</li>
+       </ul>
+	   </div>
+	  <div class = "seg2" id="dos-container">
+	     <script>
+        // Initialize the JS-DOS Emulator
+        const dos = new JsDos({
+            // Configure the game to run (you need to host the DOOM game files)
+            files: {
+                'doom.wad': '/path/to/your/doom.wad' // Path to your game file
+            },
+            canvas: document.getElementById('dos-container')
+        });
+
+        // Load and run the game
+        dos.run('doom.exe');
+       </script>
+	      
+	    </div>
+	</div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>
+

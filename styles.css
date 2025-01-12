@@ -1,0 +1,84 @@
+body {
+	background-image : url('peterdancing.gif') ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+	
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.title1 {
+	display: flex;
+	background-image : url('title-background.gif') ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	justify-content: center;
+	align-items: center;  
+	text-align: center;
+    color: white; 
+    animation: colorChange 3s infinite;  
+	width: 50% ;
+	
+}
+@keyframes colorChange {
+    0% { color: white; }
+    25% { color: red; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: yellow; }
+}
+.scrolling-text {
+	        position: fixed ;
+            width: 100%;
+            white-space: nowrap;  /* Prevents text from wrapping */
+            overflow: hidden;     /* Hides the text outside the container */
+            box-sizing: border-box; /* Ensures padding doesn't affect the container size */
+			color : green ;
+			background-color: black;  
+        }
+
+.scrolling-text span {
+            display: inline-block;
+            padding-left: 100%;   /* Starts the text off-screen to the right */
+            animation: scroll-left 20s linear infinite; /* Scrolls the text from right to left */
+        }
+
+@keyframes scroll-left {
+            from {
+                transform: translateX(100%); /* Start off the screen to the right */
+            }
+            to {
+                transform: translateX(-100%); /* Scroll off the screen to the left */
+            }
+        }
+.normal-title {
+	text-align : center ;
+	animation: colorChange 3s infinite; 
+}
+.headerr {
+	display : flex;
+	justify-content: center;
+}
+.seg {
+	display :flex ;
+	border: 1px solid black;	
+	height: 100vh;
+}
+
+.seg1 {
+	width : 15% ;
+	height: 50vh;
+	border : 2px solid black;
+	background-color:teal ;
+}
+.seg2 { 
+    width : 85% ;
+	height: 100vh;
+	border : 2px solid black;
+     
+}
