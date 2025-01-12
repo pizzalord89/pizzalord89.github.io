@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
     <title>FUNNY</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="https://cdn.jsdelivr.net/npm/js-dos@7.3.0/js-dos.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+ <script>
+ Dos(document.getElementById("app"), {
+   dosboxConf: `
+     [autoexec]
+     mount c .
+     c:
+   `,
+   initFs: [
+     { path: "1.txt", contents: new TextEncoder().encode("123") },
+     { path: "D/2.txt", contents: new TextEncoder().encode("345") },
+   ],
+   onEvent: (event, ci) => {
+     if (event === "ci-ready") {
+        // ci: CommandIterface is ready
+    }
+  },
+});</script>
     <!-- Header Section -->
 	<div class="scrolling-text">
             <span>Breaking News: THIS SITE IS SUPER COOL I LOVE PETER GRIFFIN!</span>
@@ -33,20 +50,8 @@
        </ul>
 	   </div>
 	  <div class = "seg2" id="dos-container">
-	     <script>
-        // Initialize the JS-DOS Emulator
-        const dos = new JsDos({
-            // Configure the game to run (you need to host the DOOM game files)
-            files: {
-                'hoyle': 'hoyle/' // Path to your game file
-            },
-            canvas: document.getElementById('dos-container')
-            });
-
-        // Load and run the game
-            dos.run('install.exe');
-       </script>
-	      
+		  
+		  
 	    </div>
 	</div>
     </main>
