@@ -46,6 +46,25 @@ html, body {
 	
 }
 .title1{
+	display: flex;
+	background-image : url('title-background.gif') ;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	justify-content: center;
+	align-items: center;  
+	text-align: center;
+    color: white; 
+    animation: colorChange 3s infinite;  
+	width: 50% ;
+	
+}
+@keyframes colorChange {
+    0% { color: white; }
+    25% { color: red; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: yellow; }
 }
 .main{
 	display:flex;
@@ -56,6 +75,9 @@ html, body {
 .menu {
 	width: 15%;
 	height: 50%;
+}
+.menu-title {
+	animation: colorChange 3s infinite;  
 }
 .show {
 	width: 85%;
