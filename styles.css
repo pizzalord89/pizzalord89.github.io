@@ -43,7 +43,13 @@ html, body {
 	height : 10%;
 	width : 100%;
 	align-items: center; 
+	justify-content: center; 
+	overflow: hidden;
 	
+}
+.title img {
+	height: auto;
+	width: auto;
 }
 .title1{
 	display: flex;
@@ -76,6 +82,10 @@ html, body {
 	width: 15%;
 	height: 50%;
 	background-color:black;
+}
+.menu img {
+	width: auto% ;
+	height: auto% ;
 }
 .menu-title {
 	animation: colorChange 3s infinite; 
