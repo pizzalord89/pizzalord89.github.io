@@ -50,9 +50,9 @@ html, body {
 .title img {
 	height: auto;
 	width: auto;
+	overflow: hidden;
 }
 .title1{
-	display: flex;
 	background-image : url('title-background.gif') ;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
