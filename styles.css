@@ -1,45 +1,27 @@
-body {
+html, body {
 	background-image : url('peterdancing.gif') ;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	height: 100% ;
+	width: 100% ;
+	overflow: hidden;
 	
 	
 }
-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.title1 {
-	display: flex;
-	background-image : url('title-background.gif') ;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	justify-content: center;
-	align-items: center;  
-	text-align: center;
-    color: white; 
-    animation: colorChange 3s infinite;  
-	width: 50% ;
+.the_page{
+	height: 100%;
+	width: 100% ;
 	
-}
-@keyframes colorChange {
-    0% { color: white; }
-    25% { color: red; }
-    50% { color: green; }
-    75% { color: blue; }
-    100% { color: yellow; }
 }
 .scrolling-text {
-	        position: fixed ;
             width: 100%;
             white-space: nowrap;  /* Prevents text from wrapping */
-            overflow: hidden;     /* Hides the text outside the container */
+			overflow: hidden; 
             box-sizing: border-box; /* Ensures padding doesn't affect the container size */
 			color : green ;
 			background-color: black;  
+			height: 3%;
         }
 
 .scrolling-text span {
@@ -56,29 +38,32 @@ iframe {
                 transform: translateX(-100%); /* Scroll off the screen to the left */
             }
         }
-.normal-title {
-	text-align : center ;
-	animation: colorChange 3s infinite; 
-}
-.headerr {
-	display : flex;
+.title{
+	display:flex;
+	height : 10%;
+	width : 100%;
 	justify-content: center;
+	
 }
-.seg {
-	display :flex ;
-	border: 1px solid black;	
-	height: 100vh;
+.title1{
 }
-
-.seg1 {
-	width : 15% ;
-	height: 50vh;
-	border : 2px solid black;
-	background-color:teal ;
+.main{
+	display:flex;
+	width:100%;
+	height:87%;
+	
 }
-.seg2 { 
-    width : 85% ;
-	height: 100vh;
-	border : 2px solid black;
-     
+.menu {
+	width: 15%;
+	height: 50%;
+	background-color: teal;
+}
+.show {
+	width: 85%;
+	height: 100%;
+	background-color:red;
+}
+.shower {
+	width: 100%;
+	height: 100%;
 }
